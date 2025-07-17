@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>yassin Shop</title>
+        <link  href="./res/styles/style.css" rel="stylesheet">
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>shop</h1>
+        </header>
+        <div class="header_place_holder">.</div>
+
+        <div class="container">
+            <aside id="list_container">
+                Loading....
+                <script>
+                    random_list().then(res=>{list_container.innerHTML=res});
+                </script>
+            </aside>
+
+            <main id="main">
+
+                Loading...
+                <script>
+                    
+                    random_object().then(res=>{main.innerHTML=res})
+                </script>
+            </main>
+        </div>
+
+        <footer>
+            <div class="page_button_container">
+                <span>
+                    <button direction="left" onclick="change_page('previous')" class="page_button">previous</button>
+                    <span>||</span>
+                    <button direction="right" onclick="change_page('next')" class="page_button">next</button>
+                </span>
+            </div>
+
+            <p>
+            *<a href=".">Terms of servises</a> *<a href=".">developpers</a>
+            </p>
+        </footer>
+    </body>
+
+</html>

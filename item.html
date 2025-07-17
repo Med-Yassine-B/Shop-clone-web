@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="./res/styles/item_style.css">
+        <script src="./scripts/script.js"></script>
+        <meta charset='utf8'>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>shop</h1>
+            <span class="back_arrow" onclick="history.back()"> &lt;--</span>
+        </header>
+        <div class="header_place_holder">
+        </div>
+        <main>
+            <div class="item">
+                <span>
+                <img id="item_image" src="./res/unloaded.png" width="500">
+                <p id="name_lable"></p>
+                </span><br>
+                <span> Price:<font color="red" id="price_label">500$</font></span>
+            </div>
+
+            <script>
+                let data=load_item().then(res=>{
+                item_image.src=res.images[0];
+                price_label.innerText=res.price+"$";
+                name_lable.innerText=res.title;
+                })
+                
+            </script>
+
+        </main>
+        </footer>
+        </footer>
+    </body>
+
+</html>
